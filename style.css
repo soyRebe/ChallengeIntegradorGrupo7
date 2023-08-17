@@ -1,0 +1,28 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+.fill-color-warn {
+ background-color: #FF3333;
+}
+
+/* ver si no esta el bg dark en bootstrap */
+.fill-color-black {
+    background-color: #30343F;
+}
+
+.text-color-semi-black {
+    color: #30343F
+}
+
+.text-color-bold-black { 
+    color: #111111;
+}
+
+.text-color-blue {
+    color: #1D84B5;
+}
