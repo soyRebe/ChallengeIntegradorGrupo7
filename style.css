@@ -1,15 +1,44 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Raleway:wght@100;400;500;600&display=swap');
 
-
-body {
-    font-family: 'Raleway', sans-serif;
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-button {
-    font-family: 'Inter', sans-serif;
+hmtl {
+    font-family: 'inter', sans-serif;
+    font-size: 62.5%;
+    color: #111111;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 2em;
+}
+
+header, footer {
+    font-size: 1.8em;
+    color: #ffff;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1.8em;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .fill-color-warn {
  background-color: #FF3333;
 }
