@@ -40,6 +40,7 @@
     --spacing-68: 6.8rem; 
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
+    --spacing-20: 2rem;
     --spacing-16: 1.6rem;
     --spacing-12: 1.2rem;
     --spacing-8: 0.8rem;
@@ -54,23 +55,26 @@
     box-sizing: border-box;
 }
 
-hmtl {
+html {
     color: var(--dark-solid);
     font-family: var(--base-font);
     font-size: 62.5%;
 }
 
+img {
+    width: 100%;
+}
+
 a {
     color: inherit;
-    font-family: inherit;
-    font-size: 2em;
     text-decoration: none;
+    font-size: inherit;
 }
 
 header, footer {
     color: var(--light-font-solid);
-    font-size: var(--font-medium);
-    font-family: var(--title-font);
+   
+   /* background-color: var(--dark-bg-solid);*/
 }
 
 ul, ol {
@@ -85,23 +89,32 @@ p {
     max-width: 1200px;
     margin: 0 auto;
 }
-.fill-color-warn {
- background-color: #FF3333;
+
+/** header **/
+
+header {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+
+}
+.navbar , .navbar__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
 }
 
-/* ver si no esta el bg dark en bootstrap */
-.fill-color-black {
-    background-color: #30343F;
+.navbar__logo {
+    width: 300px;
+
 }
 
-.text-color-semi-black {
-    color: #30343F
+.navbar__link {
+  font-size:var(--font-medium);
+  font-family: var(--title-font);
+   
 }
 
-.text-color-bold-black { 
-    color: #111111;
+.navbar__menu {
+    gap: var(--spacing-20);
 }
 
-.text-color-blue {
-    color: #1D84B5;
-}
