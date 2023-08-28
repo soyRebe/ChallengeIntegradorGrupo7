@@ -111,10 +111,41 @@ header {
 .navbar__link {
   font-size:var(--font-medium);
   font-family: var(--title-font);
+  padding: var(--spacing-8) var(--spacing-16);
+  display: inline-block;
+  transition: background .3s ease-in-out;
+  position: relative;
    
+}
+
+
+.navbar__link:hover {
+   background-color: var(--primary-900);
+     
+  }
+   
+  .with-icon {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
 }
 
 .navbar__menu {
     gap: var(--spacing-20);
 }
 
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-bg-solid) ;
+}
+
+.submenu_item {
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+}
+
+.with_submenu:hover .submenu {
+    display: block;
+}
