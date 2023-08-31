@@ -29,7 +29,7 @@
     --font-display: 4.6em;
     --font-jumbo: 3.8em;
     --font-xlarge: 3.0em;
-    --font-large: 24em;
+    --font-large: 2.4em;
     --font-medium: 1.8em;
     --font-small: 1.6em;
     --font-xsmall: 1.4em;
@@ -40,6 +40,7 @@
     --spacing-68: 6.8rem; 
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
     --spacing-20: 2rem;
     --spacing-16: 1.6rem;
     --spacing-12: 1.2rem;
@@ -212,6 +213,59 @@ header {
 }
 
 .hero__link:hover {
+    color: var(--light-font-solid);
+    background-color: var(--primary-900);
+   
+
+}
+
+/* Colecciones  */
+
+.collection {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      align-items: center;
+}
+
+.collection:nth-child(2) .collection__cover{ 
+    order: -1;
+}
+
+.collection__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    align-items: start;
+}
+.collection__title {
+    font-family: var(--title-font);
+    font-size: var(--font-display);
+    font-weight: 500;
+
+}
+
+.collection__text {
+    font-family: var(--title-font);
+    font-size: var(--font-large);
+    font-weight: 300;
+    border-bottom: 2px solid var(--primary-solid);
+    padding-bottom: var(--spacing-20);
+    
+}
+
+.collection__link {
+    background-color: var(--dark-bg-solid);
+    border-radius: 50px;
+    color: var(--light-font-solid);
+    display: inline-block;
+    font-family: var(--title-font);
+    font-size: var(--font-medium);
+    font-weight: 500;
+    padding: var(--spacing-16) var(--spacing-36);
+    transition: all .3s ease-in-out;
+}
+
+.collection__link:hover {
     color: var(--light-font-solid);
     background-color: var(--primary-900);
    
