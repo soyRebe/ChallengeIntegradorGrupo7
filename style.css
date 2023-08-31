@@ -134,18 +134,86 @@ header {
     gap: var(--spacing-20);
 }
 
+.with_submenu:hover .submenu {
+    display: block;
+}
+
 .submenu {
     display: none;
+    width: 300px;
     position: absolute;
     background-color: var(--dark-bg-solid) ;
 }
 
-.submenu_item {
+.submenu__link {
     display: block;
     padding: var(--spacing-8) var(--spacing-16);
     font-size: var(--font-medium);
 }
 
-.with_submenu:hover .submenu {
-    display: block;
+.submenu__link:hover {
+    background-color: var(--primary-900);
+}
+
+/* Hero */
+.hero {
+    background-image: url('assets/img/funkos-banner.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    padding: var(--spacing-128);
+    position: relative;
+}
+
+.hero::before {
+    content:'';
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    backdrop-filter: blur(2px) brightness(.9);
+
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+    align-items: start;
+    z-index: 2;
+    position: relative;
+}
+
+.hero__title {
+    color: var(--light-font-solid);
+    font-family: var(--title-font);
+    font-size: var(--font-jumbo); 
+}
+
+.hero__text {
+    color: var(--light-font-solid);
+    font-family: var(--title-font);
+    font-size: var(--font-medium);   
+}
+
+.hero__link {
+    background-color: var(--light-bg-solid);
+    border-radius: 50px;
+    color: var(--dark-solid);
+    display: inline-block;
+    font-family: var(--title-font);
+    font-size: var(--font-medium);
+    font-weight: 500;
+    padding: var(--spacing-12) var(--spacing-68);
+    transition: all .3s ease-in-out;
+}
+
+.hero__link:hover {
+    color: var(--light-font-solid);
+    background-color: var(--primary-900);
+   
+
 }
