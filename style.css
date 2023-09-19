@@ -98,7 +98,9 @@ header {
     padding: var(--spacing-36);
 
 }
-.navbar , .navbar__menu {
+.navbar , 
+.navbar__footer,
+.navbar__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;   
@@ -109,7 +111,7 @@ header {
 
 }
 
-.navbar__link {
+.navbar__link, .navbar__link__footer {
   font-size:var(--font-medium);
   font-family: var(--title-font);
   padding: var(--spacing-8) var(--spacing-16);
@@ -120,7 +122,7 @@ header {
 }
 
 
-.navbar__link:hover {
+.navbar__link:hover, .navbar__link__footer:hover {
    background-color: var(--primary-900);
      
   }
@@ -368,6 +370,90 @@ header {
     }
 }
 
+
+/** Login **/
+
+.form_login__title {
+    font-family: var(--title-font);
+    font-size: var(--font-display);
+    text-align: center;
+    padding-top: var(--spacing-24);
+
+}
+
+.form_login__text {
+    font-family: var(--title-font);
+    font-size: var(--font-xlarge);
+    text-align: center;
+    padding: var(--spacing-24);
+
+}
+
+.form_login__container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+   
+}
+
+.form_login__label {
+    font-size: var(--font-large);   
+  
+}
+
+.form_login__input {
+    font-size: var(--font-large);
+    border: none;
+    border-bottom: 2px solid var(--primary-solid);
+
+}
+
+.form_login__input:active, 
+.form_login__input:focus, 
+.form_login__input:focus-visible {
+    outline: none;
+    border-bottom: 2px solid var(--primary-solid);
+
+}
+
+
+.form_login__data__link {
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    display: inline-block;
+    font-size:var(--font-medium);
+    font-family: var(--title-font);
+    padding: var(--spacing-8) var(--spacing-16);
+    transition: background .3s ease-in-out;
+    position: relative;
+   
+
+}
+
+.form_login__data__link:hover {
+    background-color: var(--primary-900);   
+   }
+   
+.form_login__data {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-24);
+    align-items: center;
+}
+
+.form_login__label_checkbox {
+    font-size: var(--font-small);
+    color:var(--secondary-solid)
+}
+
+.form_login__span {
+  color: var(--dark-solid);
+}
+
+.check:checked {
+    background-color: var(--primary-solid);
+  }
+
 /* footer */
 
 .footer {
@@ -379,4 +465,82 @@ header {
     margin-top: var(--spacing-36);
     text-align: center;
 
+}
+
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
+    .navbar__logo__mobile {
+        display: none;
+    }
+  }
+
+
+@media screen and (max-width: 767px) {
+.navbar__logo__desk {
+    display: none;
+}  
+
+.navbar__logo__mobile  {
+    width: 50%;
+}
+
+.navbar__logo {
+    width: 100px;
+}
+
+.navbar {
+    justify-content: center;
+}
+
+.navbar__menu {
+    gap: var(--spacing-12);
+}
+       
+.form_login__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: var(--spacing-20);
+    align-items: center;
+  
+}
+
+.navbar__link,
+.form_login__title,
+.form_login__text, 
+.form_login__input,
+.form_login__label {
+    font-size: var(--font-small); 
+
+  }
+
+.form_login__data__link {
+    margin-bottom: 1.5rem;
+}
+.navbar__item__footer {
+    display: flex; 
+
+  }
+
+.navbar__link__footer, .footer__copy {
+    padding: 1rem;
+    font-size: var(--font-small);
+}
+
+.footer__copy {
+    margin: 1rem;
+    font-size: var(--font-small);
+}
+
+.footer {
+    padding: var(--spacing-28);
+}
+
+.footer_login {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 }
